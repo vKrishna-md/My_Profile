@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Name | MuleSoft Integration Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7ff;--surface:#ffffff;--ink:#10163a;--muted:#55608a;--line:#dfe3f5;--a1:#4f46e5;--a2:#0ea5a0;--a3:#e0529c;--soft:#eceeff;--on:#ffffff;--grad:linear-gradient(110deg,var(--a1),var(--a2));
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0f24;--surface:#121a3a;--ink:#eaeeff;--muted:#a3aed6;--line:#26325f;--a1:#8b87ff;--a2:#2dd4bf;--a3:#f472b6;--soft:#1a2350;--on:#0a0f24}}
+:root[data-theme="dark"]{--bg:#0a0f24;--surface:#121a3a;--ink:#eaeeff;--muted:#a3aed6;--line:#26325f;--a1:#8b87ff;--a2:#2dd4bf;--a3:#f472b6;--soft:#1a2350;--on:#0a0f24}
+html{scroll-padding-top:1rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,"Segoe UI",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--a1)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--a2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem;position:relative}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--grad);z-index:20}
+nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;padding:1.2rem 0;font-weight:500;position:relative;z-index:2}
+nav a{color:var(--muted);text-decoration:none;padding:.15rem 0;background:linear-gradient(var(--a2),var(--a2)) 0 100%/0 2px no-repeat;transition:background-size .3s,color .3s}
+nav a:hover{color:var(--ink);background-size:100% 2px}
+.heroWrap{position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:float 14s ease-in-out infinite alternate}
+.b1{width:26rem;height:26rem;background:var(--a1);top:-8rem;left:-6rem}
+.b2{width:22rem;height:22rem;background:var(--a2);top:2rem;right:-5rem;animation-delay:-5s}
+.b3{width:14rem;height:14rem;background:var(--a3);bottom:-4rem;left:40%;opacity:.22;animation-delay:-9s}
+@keyframes float{to{transform:translate(2.5rem,1.5rem) scale(1.12)}}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding:2rem 0 5rem;position:relative}
+.hello{display:inline-block;background:var(--surface);border:1px solid var(--line);padding:.3rem .9rem;border-radius:2rem;font-size:.95rem;color:var(--muted);margin-bottom:1.1rem}
+.hello i{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--a2);margin-right:.5rem;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--a2)}100%{box-shadow:0 0 0 .6rem transparent}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.03em;color:var(--a1);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.role{font-family:Sora,sans-serif;font-size:1.35rem;margin:.9rem 0 1rem;font-weight:500}
+.lede{color:var(--muted);max-width:34rem;margin:0 0 1.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.8rem;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.primary{background:var(--grad);color:var(--on);box-shadow:0 8px 22px -8px var(--a1)}
+.btn.ghost{border-color:var(--a1);color:var(--a1);background:var(--surface)}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:1.1rem;box-shadow:0 24px 50px -28px var(--a1)}
+.diagram svg{width:100%;height:auto;display:block}
+.diagram p{margin:.6rem .3rem 0;font-size:.9rem;color:var(--muted)}
+.pk{animation:drop 2.4s ease-in-out infinite}
+.pk2{animation-delay:-1.2s}
+@keyframes drop{0%{transform:translateY(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(96px);opacity:0}}
+section{padding:4rem 0;position:relative}
+section:nth-of-type(even){background:var(--soft)}
+h2{font-size:clamp(1.8rem,4.5vw,2.6rem);margin-bottom:2rem;letter-spacing:-.02em}
+h2::after{content:"";display:block;width:3.2rem;height:5px;border-radius:5px;background:var(--grad);margin-top:.7rem}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:2.5rem}
+.about p{margin:0 0 1rem;max-width:40rem}
+.facts{margin:0;padding:0;list-style:none;display:grid;gap:1rem}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1rem 1.25rem;transition:transform .25s}
+.facts li:hover{transform:translateX(6px)}
+.facts b{display:block;font-family:Sora,sans-serif;font-size:2rem;color:var(--a1);line-height:1.1}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
+.skill{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--a1);border-radius:1rem;padding:1.25rem;transition:transform .25s,box-shadow .25s}
+.skill:nth-child(3n+2){border-top-color:var(--a2)}
+.skill:nth-child(3n){border-top-color:var(--a3)}
+.skill:hover{transform:translateY(-5px);box-shadow:0 18px 34px -22px var(--a1)}
+.skill h3{font-size:1.1rem;margin-bottom:.8rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:0;padding:0;list-style:none}
+.tags li{background:var(--soft);padding:.2rem .7rem;border-radius:2rem;font-size:.9rem;transition:background .2s,color .2s}
+.tags li:hover{background:var(--a1);color:var(--on)}
+.note{color:var(--muted);font-size:.95rem;margin:1.4rem 0 0}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:1.75rem;margin-bottom:1.75rem;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.proj::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:linear-gradient(var(--a1),var(--a2))}
+.proj:hover{transform:translateY(-4px);box-shadow:0 26px 44px -30px var(--a1)}
+.proj h3{font-size:1.5rem}
+.proj .sub{color:var(--a2);font-weight:700;margin:.4rem 0 1rem}
+.layers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:1.2rem 0}
+.layer{position:relative;background:var(--soft);border-radius:.8rem;padding:.8rem .9rem;font-size:.95rem}
+.layer b{display:block;color:var(--a1)}
+.layer:not(:last-child)::after{content:"";position:absolute;top:50%;right:-1.1rem;width:1.1rem;height:3px;background:repeating-linear-gradient(90deg,var(--a2) 0 5px,transparent 5px 9px);background-size:18px 3px;animation:run 1s linear infinite}
+@keyframes run{to{background-position:18px 0}}
+details{margin-top:1rem}
+summary{cursor:pointer;font-weight:700;color:var(--a1)}
+details ul{margin:.8rem 0 0;padding-left:1.2rem}
+details li{margin-bottom:.45rem}
+details[open] ul{animation:open .35s ease}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}}
+.timeline{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:3px solid var(--line)}
+.timeline li{position:relative;padding:0 0 2rem 1.1rem}
+.timeline li::before{content:"";position:absolute;left:-2.35rem;top:.35rem;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--grad);border:3px solid var(--bg)}
+.timeline li.in::before{animation:pop .6s ease}
+@keyframes pop{0%{transform:scale(.2)}70%{transform:scale(1.35)}100%{transform:scale(1)}}
+.timeline h3{font-size:1.2rem}
+.timeline .meta{color:var(--a1);font-size:.95rem;margin:.2rem 0 .5rem;font-weight:500}
+.timeline p{margin:0;max-width:44rem}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.25rem}
+.contact{background:var(--grad)!important;color:var(--on)}
+.contact h2::after{background:var(--on)}
+.contact p{max-width:36rem;margin:0}
+.contact ul{list-style:none;padding:0;margin:1.5rem 0 0;display:flex;flex-wrap:wrap;gap:.8rem 1.6rem;align-items:center}
+.contact a{color:var(--on);font-weight:700}
+.contact .btn.primary{background:var(--on);color:var(--a1);box-shadow:none}
+footer{padding:1.8rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:760px){.hero,.about{grid-template-columns:1fr}.layers{grid-template-columns:1fr}.layer:not(:last-child)::after{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="heroWrap">
+<span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+<div class="wrap">
+<nav aria-label="Primary"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+<header class="hero">
+<div>
+<span class="hello"><i></i>Open to junior MuleSoft roles</span>
+<h2>E VIJAYA KRISHNA GOUD </h2>
+<p class="role">Aspiring MuleSoft Integration Developer</p>
+<p class="lede">I turn business requirements into clear, structured technical profiles, and I’m building hands-on skills in Mule 4, API-led connectivity and DataWeave.</p>
+<div class="btns"><a class="btn primary" href="#projects">View projects</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+</div>
+<div class="diagram" role="img" aria-label="Three layer API-led design with data moving from Experience API through Process API to System API">
+<svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="var(--a1)"/><stop offset="1" stop-color="var(--a2)"/></linearGradient></defs>
+<g font-family="DM Sans,system-ui,sans-serif" font-size="14">
+<rect x="20" y="20" width="380" height="68" rx="14" fill="var(--soft)" stroke="url(#g)" stroke-width="2.5"/>
+<text x="42" y="52" fill="var(--ink)" font-weight="700">Experience API</text><text x="42" y="73" fill="var(--muted)">Serves web and mobile channels</text>
+<rect x="20" y="116" width="380" height="68" rx="14" fill="var(--soft)" stroke="url(#g)" stroke-width="2.5"/>
+<text x="42" y="148" fill="var(--ink)" font-weight="700">Process API</text><text x="42" y="169" fill="var(--muted)">Orchestrates business logic</text>
+<rect x="20" y="212" width="380" height="68" rx="14" fill="var(--soft)" stroke="url(#g)" stroke-width="2.5"/>
+<text x="42" y="244" fill="var(--ink)" font-weight="700">System API</text><text x="42" y="265" fill="var(--muted)">Connects orders, inventory and CRM data</text>
+<line x1="350" y1="88" x2="350" y2="212" stroke="var(--line)" stroke-width="3"/>
+<circle class="pk" cx="350" cy="94" r="6" fill="var(--a3)"/><circle class="pk pk2" cx="350" cy="94" r="6" fill="var(--a2)"/>
+</g></svg>
+<p>The API-led pattern my projects follow.</p>
+</div>
+</header>
+</div></div>
+
+<section id="about"><div class="wrap rv">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I bring 8+ years in enterprise technology talent acquisition, working with hiring managers, directors and delivery teams across banking, healthcare, retail, manufacturing and telecom clients.</p>
+<p>That work taught me to clarify requirements, document process clearly and keep technical stakeholders aligned. Those are the same habits that make integration projects run smoothly.</p>
+<p>I’m now building practical MuleSoft skills through independent learning and portfolio projects, and I’m looking for a team where I can grow as a developer.</p>
+</div>
+<ul class="facts">
+<li><b><span data-count="8">8</span>+</b>Years in enterprise technology hiring</li>
+<li><b><span data-count="2">2</span></b>Independent portfolio labs</li>
+<li><b><span data-count="5">5</span></b>Mule 4 skill areas in progress</li>
+</ul>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap rv">
+<h2>Skills I’m building</h2>
+<div class="skills">
+<div class="skill"><h3>MuleSoft and Anypoint</h3><ul class="tags"><li>Mule 4</li><li>Anypoint Studio</li><li>Anypoint Platform</li><li>Exchange</li><li>API Manager</li><li>Runtime Manager</li><li>CloudHub concepts</li></ul></div>
+<div class="skill"><h3>APIs and integration</h3><ul class="tags"><li>API-led connectivity</li><li>REST</li><li>SOAP</li><li>RAML</li><li>HTTP</li></ul></div>
+<div class="skill"><h3>Data and transformation</h3><ul class="tags"><li>DataWeave 2.0</li><li>JSON</li><li>XML</li><li>CSV</li><li>Flow control</li></ul></div>
+<div class="skill"><h3>Testing and reliability</h3><ul class="tags"><li>Error handling</li><li>Logging</li><li>MUnit</li><li>Postman</li><li>Troubleshooting</li></ul></div>
+<div class="skill"><h3>Tools</h3><ul class="tags"><li>Git and GitHub</li><li>Maven concepts</li><li>Postman</li></ul></div>
+<div class="skill"><h3>Professional strengths</h3><ul class="tags"><li>Requirements analysis</li><li>Stakeholder communication</li><li>Process documentation</li><li>Data accuracy</li><li>Confidentiality</li></ul></div>
+</div>
+<p class="note">Technical skills are at a learning and fundamentals level, built through independent practice.</p>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2 class="rv">Projects</h2>
+<article class="proj rv">
+<h3>Retail Order and Inventory Integration</h3>
+<p class="sub">Independent portfolio lab. API-led design with RAML contracts.</p>
+<p>An order and inventory integration split into three API layers, with contract-first design, data transformation and test coverage.</p>
+<div class="layers">
+<div class="layer"><b>Experience API</b>Consumer-facing channel</div>
+<div class="layer"><b>Process API</b>Business orchestration</div>
+<div class="layer"><b>System API</b>Order and inventory data</div>
+</div>
+<ul class="tags"><li>Mule 4</li><li>RAML</li><li>DataWeave</li><li>MUnit</li><li>Postman</li></ul>
+<details><summary>What I practised</summary><ul>
+<li>Defined resource contracts in RAML and practised request and response validation.</li>
+<li>Transformed JSON to JSON and JSON to XML with DataWeave, using reusable mapping logic.</li>
+<li>Used routing, choice logic, logging and error handling, including negative scenarios.</li>
+<li>Validated endpoints in Postman and added MUnit tests for key paths.</li>
+</ul></details>
+</article>
+<article class="proj rv">
+<h3>Customer Data Synchronisation</h3>
+<p class="sub">Independent portfolio lab. REST connector pattern between two services.</p>
+<p>Synchronises customer records between a sample CRM-style endpoint and a downstream service, with validation and structured error responses.</p>
+<ul class="tags"><li>Mule 4</li><li>REST</li><li>DataWeave</li><li>Git</li><li>Postman</li></ul>
+<details><summary>What I practised</summary><ul>
+<li>Used REST calls and a connector-based integration pattern to move customer records.</li>
+<li>Applied DataWeave mapping, field-level defaults, duplicate and validation handling.</li>
+<li>Returned structured error responses and used environment-specific configuration.</li>
+<li>Documented API contracts, test cases, sample payloads and troubleshooting steps, versioned in Git.</li>
+</ul></details>
+</article>
+<p class="note rv">Both projects are independent practice scenarios, not employer or client implementations.</p>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2 class="rv">Experience</h2>
+<ol class="timeline">
+<li class="rv"><h3>Senior Domestic Recruiter</h3><p class="meta">StratSol Software Systems Pvt. Ltd., Hyderabad | Aug 2022 to Apr 2023</p><p>Clarified role requirements with hiring managers and client HR, managed hiring from sourcing to joining, and kept ATS and SuccessFactors records accurate. Clients: Nuance, Cleveland Clinic, Anthem NGS.</p></li>
+<li class="rv"><h3>Senior IT Recruiter</h3><p class="meta">Scalene Works People Solutions (client: Capgemini Invent), Hyderabad | Feb 2021 to May 2022</p><p>Worked with delivery teams across Automotive, Banking, Insurance, Telecom and more. Ran Boolean and X-Ray sourcing and shared talent-availability insights.</p></li>
+<li class="rv"><h3>Senior IT Recruiter</h3><p class="meta">Mindpool Technologies Ltd., Hyderabad | Nov 2019 to Nov 2020</p><p>Handled full-cycle hiring for networking, software, infrastructure and enterprise application roles for clients including D-Link, Saint-Gobain and Hilti.</p></li>
+<li class="rv"><h3>Consultant, Recruitment</h3><p class="meta">Magna Infotech Pvt. Ltd. (Quess Corp Ltd.), Hyderabad | Jul 2018 to Sep 2019</p><p>Supported technology hiring across healthcare, retail, legal and manufacturing clients including Optum, Walmart, Philips and Hitachi.</p></li>
+<li class="rv"><h3>HR Recruiter</h3><p class="meta">Provost Solutions, Hyderabad | Feb 2014 to Mar 2018</p><p>Delivered IT and non-IT recruitment, built candidate pipelines and coordinated across multiple open positions.</p></li>
+</ol>
+</div></section>
+
+<section id="education"><div class="wrap rv">
+<h2>Education and training</h2>
+<div class="edu">
+<div class="skill"><h3>B.Sc. (Computers)</h3><p>St. Joseph’s Degree College, Kurnool<br>Sri Krishnadevaraya University</p></div>
+<div class="skill"><h3>Training</h3><ul class="tags"><li>LinkedIn Recruiter</li><li>SAP SuccessFactors Employee Central</li><li>Power BI</li></ul></div>
+<div class="skill"><h3>Languages</h3><ul class="tags"><li>Telugu (native)</li><li>English (proficient)</li><li>Hindi (intermediate)</li><li>Tamil (beginner)</li></ul></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap rv">
+<h2>Let’s talk</h2>
+<p>I’m open to junior and associate MuleSoft Developer roles. Send me a message and I’ll reply promptly.</p>
+<ul>
+<li><a class="btn primary" href="mailto:you@example.com">Email me</a></li>
+<!--
+<li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+<li><a href="https://github.com/your-username">GitHub</a></li> -->
+<li>Hyderabad, India</li>
+</ul>
+</div></section>
+<footer><div class="wrap">© Your Name. Portfolio projects are independent practice work.</div></footer>
+<script>
+(function(){
+var d=document.documentElement,rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+d.classList.add("js");
+var els=document.querySelectorAll(".rv");
+function show(e){e.classList.add("in")}
+if(rm||!("IntersectionObserver" in window)){els.forEach(show)}else{
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target);
+x.target.querySelectorAll("[data-count]").forEach(count)}})},{threshold:.15});
+els.forEach(function(e){io.observe(e)})}
+function count(n){var t=+n.dataset.count,s=null;if(rm){n.textContent=t;return}
+function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1200,1);n.textContent=Math.round(t*p);if(p<1)requestAnimationFrame(f)}
+n.textContent=0;requestAnimationFrame(f)}
+var bar=document.getElementById("bar");
+function sc(){var h=d.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+"%"}
+addEventListener("scroll",sc,{passive:true});sc();
+})();
+</script>
+</body>
+</html>
